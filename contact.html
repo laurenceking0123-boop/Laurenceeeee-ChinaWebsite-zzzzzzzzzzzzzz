@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2 class="logo">CHINA</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span class="theme-icon">☀️</span> <span class="theme-text">Light Mode</span>
+        </button>
+    </nav>
+</aside>
+
+<main>
+    <h2 class="section-title" style="text-align: center;">Contact Us</h2>
+
+    <section class="contact-section">
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div id="custom-alert-overlay" class="alert-overlay">
+            <div class="custom-alert-box">
+                <div class="success-icon">&#10004;</div>
+                <h3>Thank you!</h3>
+                <p>Your message has been sent successfully.</p>
+                <button type="button" id="close-alert-btn" class="btn">OK</button>
+            </div>
+        </div>
+    </section>
+    <footer>Developer: Laurence King Domingo</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

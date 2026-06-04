@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Tourism</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2 class="logo">CHINA</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span class="theme-icon">☀️</span> <span class="theme-text">Light Mode</span>
+        </button>
+    </nav>
+</aside>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover China</h1>
+            <p>Ancient culture, modern cities, endless history.</p>
+            <a href="destinations.html" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Highlights</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="New folder/GreatWall/GreatWall.jpg" alt="Great Wall">
+                <div class="card-content">
+                    <h3>Great Wall</h3>
+                    <p>One of the world’s greatest historical wonders spanning thousands of miles.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="New folder/Shanghai/cover.jpg" alt="Shanghai Skyline">
+                <div class="card-content">
+                    <h3>Shanghai</h3>
+                    <p>Experience the modern, breathtaking futuristic skyline and vibrant urban life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Upcoming Cultural Events</h2>
+        <div class="calendar-layout">
+            
+            <div class="calendar-box">
+                <div class="calendar-header">
+                    <button id="prev-month" class="cal-nav-btn">&lt;</button>
+                    <h3 id="calendar-month-year">June 2026</h3>
+                    <button id="next-month" class="cal-nav-btn">&gt;</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+                <div id="calendar-days" class="calendar-days-grid">
+                    </div>
+            </div>
+
+            <div class="event-details-card">
+                <div class="event-badge">Selected Event</div>
+                <h3 id="event-title">Click a highlighted date</h3>
+                <p id="event-date-text" class="event-meta-date">Select a date from the calendar grid to explore upcoming Chinese traditional festivals and events.</p>
+                <p id="event-description">Discover local celebrations, holiday history, and travel timing recommendations instantly.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>Developer: Laurence King Domingo</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

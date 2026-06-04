@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Guide</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="transportation.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2 class="logo">CHINA</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a class="active" href="transportation.html">Transportation</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span class="theme-icon">☀️</span> <span class="theme-text">Light Mode</span>
+        </button>
+    </nav>
+</aside>
+
+<main>
+    <h2 class="section-title">Transportation Guide</h2>
+    <p style="text-align: left; color: #aaa; margin-bottom: 25px; font-size: 16px;">Navigate China's modern transit networks seamlessly with our comprehensive travel options.</p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">🚄</div>
+                    <span class="transport-tag">Intercity</span>
+                </div>
+                <h3>High-Speed Train (CRH)</h3>
+                <p>Connects major Chinese economic hubs like Beijing, Shanghai, and Guangzhou at speeds reaching up to 350 km/h. Smooth, rapid, and highly reliable.</p>
+                <button class="transport-btn" data-target="train">View Train Schedules</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">🚇</div>
+                    <span class="transport-tag">Intracity</span>
+                </div>
+                <h3>Metro Transit Systems</h3>
+                <p>Extensive and modern subway routes spanning throughout city networks. Fully accessible with english signage prompts and contactless mobile payment turnstiles.</p>
+                <button class="transport-btn" data-target="metro">Explore Subway Maps</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">🚗</div>
+                    <span class="transport-tag">On-Demand</span>
+                </div>
+                <h3>DiDi Ride-Hailing</h3>
+                <p>China's primary localized ride service alternative to Uber. Features integrated real-time text translations for seamless communications between international riders and local drivers.</p>
+                <button class="transport-btn" data-target="didi">Book Ride Guide</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">⚡</div>
+                    <span class="transport-tag">Express Link</span>
+                </div>
+                <h3>Shanghai Maglev</h3>
+                <p>The world's fastest commercial high-speed magnetic levitation line. Bridges Shanghai Pudong Airport straight to the urban metro terminal core links in under 8 minutes.</p>
+                <button class="transport-btn" data-target="maglev">Check Ticket Rates</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">🚌</div>
+                    <span class="transport-tag">Localized</span>
+                </div>
+                <h3>City Bus Networks</h3>
+                <p>Affordable, extensive transit alternative that blankets all major districts. Easily navigated via smartphone mapping integrations across modern bus fleets.</p>
+                <button class="transport-btn" data-target="bus">Check Route Lines</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="transport-header-row">
+                    <div class="transport-icon-box">🚲</div>
+                    <span class="transport-tag">Eco-Friendly</span>
+                </div>
+                <h3>Shared Urban Bicycles</h3>
+                <p>Convenient dockless bicycle rentals scattered across sidewalks. Accessible instantly by scanning barcode labels via app integrations like Alipay or WeChat Pay.</p>
+                <button class="transport-btn" data-target="bike">How To Rent Guide</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="details-container" class="details-section">
+        <div class="details-box">
+            <button id="close-details" class="close-btn">&times;</button>
+            <div id="details-content">
+                </div>
+        </div>
+    </div>
+    <footer>Developer: Laurence King Domingo</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

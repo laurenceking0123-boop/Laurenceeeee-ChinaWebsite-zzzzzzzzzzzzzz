@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="hotels.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2 class="logo">CHINA</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a class="active" href="hotels.html">Hotels</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span class="theme-icon">☀️</span> <span class="theme-text">Light Mode</span>
+        </button>
+    </nav>
+</aside>
+
+<main>
+    <h2 class="section-title">Recommended Hotels</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="New folder/hotel/shanghai.jpg" alt="Shanghai Hotel">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-5">★ 5 Star</span>
+                    <span class="hotel-location">Shanghai</span>
+                </div>
+                <h3>InterContinental Shanghai Wonderland</h3>
+                <p>Luxury 5-star stay.</p>
+                <button class="hotel-btn" data-target="InterContinental Shanghai Wonderland" data-price="1800">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="New folder/hotel/beijinghotel.jpg" alt="Mandarin Oriental Wangfujing">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-4">★ 4 Star</span>
+                    <span class="hotel-location">Beijing</span>
+                </div>
+                <h3>Mandarin Oriental Wangfujing</h3>
+                <p>Comfort near attractions.</p>
+                <button class="hotel-btn" data-target="Mandarin Oriental Wangfujing" data-price="1400">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="New folder/hotel/ritzcarlton.jpg" alt="The Ritz-Carlton, Xi'an">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-5">★ 5 Star</span>
+                    <span class="hotel-location">Xi'an</span>
+                </div>
+                <h3>The Ritz-Carlton, Xi'an</h3>
+                <p>Elegant service and premium heritage views.</p>
+                <button class="hotel-btn" data-target="The Ritz-Carlton, Xi'an" data-price="1600">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="New folder/hotel/fourseason.jpg" alt="Four Seasons Hotel Hangzhou at West Lake">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-5">★ 5 Star</span>
+                    <span class="hotel-location">Hangzhou</span>
+                </div>
+                <h3>Four Seasons Hotel Hangzhou at West Lake</h3>
+                <p>Tranquil resort living next to historical scenic views.</p>
+                <button class="hotel-btn" data-target="Four Seasons Hotel Hangzhou at West Lake" data-price="2200">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="New folder/hotel/templehouse.jpg" alt="The Temple House">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-4">★ 4 Star</span>
+                    <span class="hotel-location">Chengdu</span>
+                </div>
+                <h3>The Temple House</h3>
+                <p>A beautiful blend of historical dynasty courtyard design and modern luxury layouts.</p>
+                <button class="hotel-btn" data-target="The Temple House" data-price="1500">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="New folder/hotel/banyantree.jpg" alt="Banyan Tree Guilin">
+            <div class="card-content">
+                <div class="rating-container">
+                    <span class="hotel-rating star-5">★ 5 Star</span>
+                    <span class="hotel-location">Guilin</span>
+                </div>
+                <h3>Banyan Tree Guilin</h3>
+                <p>Breathtaking karst mountain panorama views and peaceful river escapes.</p>
+                <button class="hotel-btn" data-target="Banyan Tree Guilin" data-price="1300">Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="booking-container" class="booking-section">
+        <div class="booking-box">
+            <button id="close-booking" class="close-btn">&times;</button>
+            
+            <div class="booking-title-row">
+                <div class="hotel-icon-box">🛎️</div>
+                <div>
+                    <h4 id="selected-hotel-name">Hotel Booking Panel</h4>
+                    <p style="color: #aaa; font-size: 13px; margin: 5px 0 0 0;">Secure your dynamic reservation itinerary instantly.</p>
+                </div>
+            </div>
+
+            <form id="hotel-inquiry-form" class="popup-booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="guest-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gmail Address</label>
+                        <input type="email" id="guest-email" placeholder="username@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Room Suite Type</label>
+                        <select id="room-type" required style="background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; color: white; font-family: inherit;">
+                            <option value="1">Standard Deluxe Room (Base Price)</option>
+                            <option value="1.5">Executive Premium Suite (+50%)</option>
+                            <option value="2.5">Presidential Imperial Luxury (+150%)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Rooms</label>
+                        <input type="number" id="room-count" min="1" max="5" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pax (Total Guests)</label>
+                        <input type="number" id="pax-count" min="1" max="20" value="1" required>
+                        <small style="color: #a1a1aa; font-size: 11px; margin-top: 5px; font-weight: 500; display: block;">* Maximum 4 guests per room</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-In Date</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-Out Date</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                </div>
+
+                <div class="price-summary-box">
+                    <div class="price-row"><span>Base Rate per Night:</span><span id="display-base-rate">¥0</span></div>
+                    <div class="price-row"><span>Total Nights:</span><span id="display-nights">0 nights</span></div>
+                    <div class="price-row"><span>Rooms Selected:</span><span id="display-rooms">1 room</span></div>
+                    <div class="price-row total-row"><span>Estimated Total Price:</span><span id="display-total-cost">¥0</span></div>
+                </div>
+
+                <button type="submit" class="submit-booking-btn">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="custom-alert-modal" class="alert-modal success-modal">
+        <div class="alert-modal-content">
+            <div class="alert-success-icon">✓</div>
+            <h3>Booking Complete!</h3>
+            <p id="alert-modal-message">Your reservation has been successfully confirmed.</p>
+            <button id="close-alert-modal" class="alert-modal-btn">Great, Thanks!</button>
+        </div>
+    </div>
+
+    <div id="custom-error-modal" class="alert-modal error-modal">
+        <div class="alert-modal-content">
+            <div class="alert-error-icon">✕</div>
+            <h3>Booking Error</h3>
+            <p id="error-modal-message">Maximum capacity limit exceeded.</p>
+            <button id="close-error-modal" class="alert-modal-btn">Go Back</button>
+        </div>
+    </div>
+
+    <footer>Developer: Laurence King Domingo</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

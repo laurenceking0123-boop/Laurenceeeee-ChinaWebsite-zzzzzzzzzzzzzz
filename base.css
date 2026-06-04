@@ -1,0 +1,374 @@
+:root {
+    --bg-color: #0b0b0b;
+    --card-bg: #161616;
+    --sidebar-bg: rgba(18, 18, 18, 0.8);
+    --accent-red: #c1121f;
+    --accent-red-hover: #a10f19;
+    --accent-yellow: #ffd60a;
+    --text-main: #ff0000;
+    --text-muted: #a1a1aa;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 35px 24px;
+    border-right: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+.logo{
+    color: var(--accent-yellow);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* NAV */
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a{
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover{
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    transform: translateX(4px);
+}
+
+.sidebar nav a.active{
+    background: var(--accent-red);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(193, 18, 31, 0.3);
+}
+
+/* MAIN CONTENT HOLDER */
+main{
+    margin-left: 260px;
+    padding: 60px;
+    width: calc(100% - 260px);
+    min-height: 100vh;
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn{
+    from{opacity: 0; transform: translateY(15px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+
+/* HERO */
+.hero{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("cover.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.75));
+}
+
+.hero-content{
+    position: relative;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.hero h1{
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--accent-yellow);
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.hero p{
+    color: #e4e4e7;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* SECTIONS */
+.section{
+    padding: 40px 0;
+}
+
+.section-title{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* CARDS */
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card{
+    background: var(--card-bg);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 24px;
+}
+
+.card-content h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-content p{
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--accent-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--accent-red-hover);
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 40px 0 20px 0;
+    color: #52525b;
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 60px;
+}
+
+
+
+/* ==========================================================================
+   GLOBAL THEME CONFIGURATIONS (CSS VARIABLES)
+   ========================================================================== */
+:root {
+    /* Default Dark Mode Styles */
+    --bg-main: #000000;
+    --bg-card: #1a1a1a;
+    --bg-box: #161616;
+    --bg-input: #111111;
+    --text-primary: #ffffff;
+    --text-secondary: #ddd;
+    --text-muted: #a1a1aa;
+    --border-ui: rgba(255, 255, 255, 0.08);
+}
+
+body.light-mode {
+    /* Light Mode Alternative Setup */
+    --bg-main: #f4f4f5;
+    --bg-card: #ffffff;
+    --bg-box: #f9f9fb;
+    --bg-input: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #3f3f46;
+    --text-muted: #71717a;
+    --border-ui: rgba(0, 0, 0, 0.1);
+}
+
+/* Connect elements safely across all active viewport templates */
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+main {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar Specific Themes */
+body.light-mode .sidebar {
+    background: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .sidebar nav a {
+    color: #3f3f46;
+}
+
+body.light-mode .sidebar nav a:hover, 
+body.light-mode .sidebar nav a.active {
+    color: white;
+    background: #c1121f;
+}
+
+/* ==========================================================================
+   THEME TOGGLE BUTTON LOOK
+   ========================================================================== */
+.theme-toggle-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 10px);
+    transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #c1121f;
+}
+
+body.light-mode .theme-toggle-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #18181b;
+}
+
+
+
+
+/* ==========================================================================
+   RESPONSIVE MOBILE STYLES (For Phones and Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Change body direction from row to column split */
+    body {
+        flex-direction: column;
+        overflow-x: hidden; /* Stops horizontal scrolling on phones */
+    }
+
+    /* 2. Turn fixed sidebar into a regular top header bar */
+    .sidebar {
+        position: relative; /* Unpins it from the left side */
+        width: 100% !important; /* Takes up full width instead of 260px */
+        height: auto !important; /* Expands naturally based on contents */
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* 3. Make navigation items display horizontally or wrap neatly */
+    .sidebar nav {
+        display: flex;
+        flex-wrap: wrap; /* Wraps buttons if they run out of room */
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .sidebar nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin: 0 !important;
+    }
+
+    /* 4. Fix Theme Toggle Button alignment on mobile */
+    .theme-toggle-btn {
+        margin: 5px auto 0 auto !important; /* Centers it */
+        width: auto;
+    }
+
+    /* 5. ADJUST MAIN CONTENT SO IT'S NOT UNDER THE SIDEBAR */
+    main {
+        margin-left: 0 !important; /* Removes desktop left margin padding */
+        width: 100% !important;
+        padding: 20px 15px !important; /* Gives breathing room on phone screens */
+        overflow-x: hidden;
+    }
+
+    /* General responsive font size fixes */
+    .section-title {
+        font-size: 28px !important;
+        text-align: center !important;
+    }
+}
